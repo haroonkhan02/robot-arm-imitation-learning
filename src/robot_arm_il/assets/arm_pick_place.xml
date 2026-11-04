@@ -1,0 +1,78 @@
+<mujoco model="arm_pick_place">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.005" integrator="implicitfast" cone="elliptic" impratio="10"/>
+
+  <default>
+    <geom friction="1.5 0.05 0.001" solref="0.004 1" solimp="0.95 0.99 0.001" contype="0" conaffinity="0"/>
+    <joint damping="2" armature="0.02"/>
+    <position kp="150" kv="12"/>
+  </default>
+
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1=".78 .8 .82" rgb2=".7 .72 .75" width="256" height="256"/>
+    <material name="grid" texture="grid" texrepeat="6 6" reflectance="0.05"/>
+    <material name="link" rgba="0.2 0.35 0.65 1"/>
+    <material name="palm" rgba="0.25 0.25 0.28 1"/>
+    <material name="cube" rgba="0.9 0.25 0.2 1"/>
+    <material name="goal" rgba="0.2 0.8 0.35 0.5"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 -0.4 1.2" dir="0 0.3 -1" diffuse="0.9 0.9 0.9"/>
+    <body name="focus" pos="0.33 0.02 0.03"/>
+    <camera name="front" mode="targetbody" target="focus" pos="0.95 0.02 0.55" fovy="45"/>
+    <camera name="top" mode="targetbody" target="focus" pos="0.33 -0.12 1.0" fovy="45"/>
+    <geom name="table" contype="1" conaffinity="1" type="plane" size="0.7 0.7 0.1" material="grid"/>
+
+    <body name="base" pos="0 0 0">
+      <geom type="cylinder" size="0.06 0.04" pos="0 0 0.04" material="link"/>
+      <body name="shoulder" pos="0 0 0.1">
+        <joint name="j1" axis="0 0 1" range="-3.0 3.0"/>
+        <geom type="cylinder" size="0.04 0.05" pos="0 0 0.0" material="link"/>
+        <body name="upper" pos="0 0 0.05">
+          <joint name="j2" axis="0 1 0" range="-1.2 1.6"/>
+          <geom type="capsule" fromto="0 0 0 0 0 0.32" size="0.03" material="link"/>
+          <body name="fore" pos="0 0 0.32">
+            <joint name="j3" axis="0 1 0" range="-2.4 2.4"/>
+            <geom type="capsule" fromto="0 0 0 0 0 0.30" size="0.025" material="link"/>
+            <body name="wrist" pos="0 0 0.30">
+              <joint name="j4" axis="0 1 0" range="-2.4 2.4"/>
+              <geom type="capsule" fromto="0 0 0 0 0 0.04" size="0.02" material="palm"/>
+              <body name="hand" pos="0 0 0.05">
+                <joint name="j5" axis="0 0 1" range="-3.2 3.2"/>
+                <geom name="hand_g" contype="1" conaffinity="1" type="box" size="0.045 0.012 0.015" pos="0 0 0.015" material="palm"/>
+                <site name="grip" pos="0 0 0.085" size="0.006" rgba="1 1 0 1"/>
+                <body name="fingerL" pos="0 0 0.03">
+                  <joint name="fl" type="slide" axis="0 1 0" range="0 0.045" damping="8" armature="0.1"/>
+                  <geom name="fingerL_g" contype="1" conaffinity="1" type="box" size="0.01 0.006 0.035" pos="0 0.012 0.035"
+                        material="palm" friction="3.0 0.1 0.01"/>
+                </body>
+                <body name="fingerR" pos="0 0 0.03">
+                  <joint name="fr" type="slide" axis="0 -1 0" range="0 0.045" damping="8" armature="0.1"/>
+                  <geom name="fingerR_g" contype="1" conaffinity="1" type="box" size="0.01 0.006 0.035" pos="0 -0.012 0.035"
+                        material="palm" friction="3.0 0.1 0.01"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+
+    <body name="cube" pos="0.3 0 0.02">
+      <freejoint name="cube_free"/>
+      <geom name="cube_g" contype="1" conaffinity="1" type="box" size="0.02 0.02 0.02" mass="0.05" material="cube"/>
+    </body>
+    <site name="goal" pos="0.3 0.2 0.001" size="0.03 0.03 0.001" type="box" material="goal"/>
+  </worldbody>
+
+  <actuator>
+    <position name="a1" joint="j1" kp="200" kv="15"/>
+    <position name="a2" joint="j2" kp="300" kv="25"/>
+    <position name="a3" joint="j3" kp="200" kv="18"/>
+    <position name="a4" joint="j4" kp="80" kv="8"/>
+    <position name="a5" joint="j5" kp="40" kv="4"/>
+    <position name="afl" joint="fl" kp="600" kv="30" ctrlrange="0 0.045"/>
+    <position name="afr" joint="fr" kp="600" kv="30" ctrlrange="0 0.045"/>
+  </actuator>
+</mujoco>

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-arm-imitation-learning"
+version = "0.1.0"
+description = "Imitation learning for a simulated MuJoCo robot arm: scripted expert, demonstrations, behaviour cloning and ACT."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Muhammad Haroon Khan" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mujoco>=3.1",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "imageio>=2.34",
+    "imageio-ffmpeg>=0.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+ra-collect = "robot_arm_il.collect:main"
+ra-expert-eval = "robot_arm_il.expert_eval:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+robot_arm_il = ["assets/*.xml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

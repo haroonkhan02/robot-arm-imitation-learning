@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Data, weights and run outputs stay local
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+outputs/
+wandb/
+
+# Local study material
+.DS_Store
+.vscode/
+.idea/
