@@ -19,11 +19,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+train = ["torch>=2.2"]
 dev = ["pytest>=8", "ruff>=0.6"]
 
 [project.scripts]
 ra-collect = "robot_arm_il.collect:main"
 ra-expert-eval = "robot_arm_il.expert_eval:main"
+ra-train = "robot_arm_il.train:main"
+ra-policy-eval = "robot_arm_il.policy_eval:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
