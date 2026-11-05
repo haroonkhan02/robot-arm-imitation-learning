@@ -26,7 +26,7 @@ class PolicyRunner:
         self.obs_mean, self.obs_std = np.array(st["obs"]["mean"]), np.array(st["obs"]["std"])
         self.act_mean, self.act_std = np.array(st["act"]["mean"]), np.array(st["act"]["std"])
         self.chunk = self.model.chunk
-        self.ensemble = ensemble  # weight exp(-m * age); 0 = uniform; <0 disables (open loop)
+        self.ensemble = ensemble  # weight exp(-m * age); 0 = uniform; <0 = newest chunk only
         self.reset()
 
     def reset(self) -> None:
@@ -43,6 +43,8 @@ class PolicyRunner:
             self.pending.setdefault(self.t + k, []).append((k, chunk[k]))
         cands = self.pending.pop(self.t)
         self.t += 1
+        if self.ensemble < 0:  # no ensembling: newest chunk only (receding horizon)
+            return min(cands, key=lambda c: c[0])[1]
         ages = np.array([a for a, _ in cands], dtype=float)
         w = np.exp(-self.ensemble * ages)
         return (np.stack([c for _, c in cands]) * w[:, None]).sum(0) / w.sum()
@@ -93,7 +95,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--ckpt", required=True)
     p.add_argument("--episodes", type=int, default=300)
     p.add_argument("--seed-start", type=int, default=50_000)
-    p.add_argument("--ensemble", type=float, default=0.01, help="temporal-ensemble decay m")
+    p.add_argument("--ensemble", type=float, default=0.01, help="ensemble decay; <0 = newest chunk")
     p.add_argument("--out", help="write the JSON summary here")
     args = p.parse_args(argv)
     res = evaluate_checkpoint(args.ckpt, args.episodes, args.seed_start, args.ensemble)
