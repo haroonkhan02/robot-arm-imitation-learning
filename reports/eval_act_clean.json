@@ -1,0 +1,2111 @@
+{
+ "checkpoint": "models/act_clean.pt",
+ "episodes": 300,
+ "seed_start": 50000,
+ "ensemble": 0.01,
+ "success_rate": 1.0,
+ "lifted_rate": 1.0,
+ "mean_steps": 120.28666666666666,
+ "episodes_detail": [
+  {
+   "seed": 50000,
+   "success": true,
+   "steps": 144,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006729940920668361
+  },
+  {
+   "seed": 50001,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014736735970545135
+  },
+  {
+   "seed": 50002,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.004068120375574628
+  },
+  {
+   "seed": 50003,
+   "success": true,
+   "steps": 137,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008825031680183526
+  },
+  {
+   "seed": 50004,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.02460250553310004
+  },
+  {
+   "seed": 50005,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005792267849776827
+  },
+  {
+   "seed": 50006,
+   "success": true,
+   "steps": 108,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011661540610424194
+  },
+  {
+   "seed": 50007,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007535180807478952
+  },
+  {
+   "seed": 50008,
+   "success": true,
+   "steps": 136,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0076872733671922945
+  },
+  {
+   "seed": 50009,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.022006590288693926
+  },
+  {
+   "seed": 50010,
+   "success": true,
+   "steps": 101,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008140511047577702
+  },
+  {
+   "seed": 50011,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0074296343043525875
+  },
+  {
+   "seed": 50012,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006183560846293545
+  },
+  {
+   "seed": 50013,
+   "success": true,
+   "steps": 140,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010062362356736921
+  },
+  {
+   "seed": 50014,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0137978246754072
+  },
+  {
+   "seed": 50015,
+   "success": true,
+   "steps": 101,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006173120063038175
+  },
+  {
+   "seed": 50016,
+   "success": true,
+   "steps": 134,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005450134942824552
+  },
+  {
+   "seed": 50017,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009925318219979166
+  },
+  {
+   "seed": 50018,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00961566326075693
+  },
+  {
+   "seed": 50019,
+   "success": true,
+   "steps": 141,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01432985197147538
+  },
+  {
+   "seed": 50020,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.017686429309408166
+  },
+  {
+   "seed": 50021,
+   "success": true,
+   "steps": 132,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008019594675748332
+  },
+  {
+   "seed": 50022,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018059153293813655
+  },
+  {
+   "seed": 50023,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012626354161277031
+  },
+  {
+   "seed": 50024,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015153067830428918
+  },
+  {
+   "seed": 50025,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009158509627793734
+  },
+  {
+   "seed": 50026,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012963806026607853
+  },
+  {
+   "seed": 50027,
+   "success": true,
+   "steps": 100,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010122299511311928
+  },
+  {
+   "seed": 50028,
+   "success": true,
+   "steps": 108,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012395496429943878
+  },
+  {
+   "seed": 50029,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015319188433511422
+  },
+  {
+   "seed": 50030,
+   "success": true,
+   "steps": 132,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00898807776506962
+  },
+  {
+   "seed": 50031,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009453759538893457
+  },
+  {
+   "seed": 50032,
+   "success": true,
+   "steps": 100,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00632605476315316
+  },
+  {
+   "seed": 50033,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00917108338562981
+  },
+  {
+   "seed": 50034,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016446931973932124
+  },
+  {
+   "seed": 50035,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014479741076643715
+  },
+  {
+   "seed": 50036,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012537345373227851
+  },
+  {
+   "seed": 50037,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.017031135994269087
+  },
+  {
+   "seed": 50038,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014661509890802678
+  },
+  {
+   "seed": 50039,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011773483762852647
+  },
+  {
+   "seed": 50040,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018776374550902333
+  },
+  {
+   "seed": 50041,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007029145654262263
+  },
+  {
+   "seed": 50042,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013151206904627939
+  },
+  {
+   "seed": 50043,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008926106095772952
+  },
+  {
+   "seed": 50044,
+   "success": true,
+   "steps": 110,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014235610511544535
+  },
+  {
+   "seed": 50045,
+   "success": true,
+   "steps": 145,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010238200401830646
+  },
+  {
+   "seed": 50046,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01545280484419688
+  },
+  {
+   "seed": 50047,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013410161908653434
+  },
+  {
+   "seed": 50048,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005442369096589809
+  },
+  {
+   "seed": 50049,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0049178981548546686
+  },
+  {
+   "seed": 50050,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011013859180630022
+  },
+  {
+   "seed": 50051,
+   "success": true,
+   "steps": 131,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010967892312853222
+  },
+  {
+   "seed": 50052,
+   "success": true,
+   "steps": 131,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01136339993774211
+  },
+  {
+   "seed": 50053,
+   "success": true,
+   "steps": 128,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013624059016139552
+  },
+  {
+   "seed": 50054,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.019758020810437444
+  },
+  {
+   "seed": 50055,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0033603011475306964
+  },
+  {
+   "seed": 50056,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009948275484061873
+  },
+  {
+   "seed": 50057,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012410337683784415
+  },
+  {
+   "seed": 50058,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01781066568166169
+  },
+  {
+   "seed": 50059,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006866649247827504
+  },
+  {
+   "seed": 50060,
+   "success": true,
+   "steps": 100,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007613629915499165
+  },
+  {
+   "seed": 50061,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00518285156755193
+  },
+  {
+   "seed": 50062,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01493580659304602
+  },
+  {
+   "seed": 50063,
+   "success": true,
+   "steps": 144,
+   "lifted": true,
+   "final_cube_goal_dist": 0.003911735067349756
+  },
+  {
+   "seed": 50064,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012647564023612175
+  },
+  {
+   "seed": 50065,
+   "success": true,
+   "steps": 139,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018363456747364507
+  },
+  {
+   "seed": 50066,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016543473877322416
+  },
+  {
+   "seed": 50067,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012983560091829594
+  },
+  {
+   "seed": 50068,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009669122365112857
+  },
+  {
+   "seed": 50069,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009723039394459548
+  },
+  {
+   "seed": 50070,
+   "success": true,
+   "steps": 142,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016304147861510715
+  },
+  {
+   "seed": 50071,
+   "success": true,
+   "steps": 108,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011079642834122473
+  },
+  {
+   "seed": 50072,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009065180353113407
+  },
+  {
+   "seed": 50073,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006402168706907151
+  },
+  {
+   "seed": 50074,
+   "success": true,
+   "steps": 128,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012228632599503462
+  },
+  {
+   "seed": 50075,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013732588652111705
+  },
+  {
+   "seed": 50076,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.003368555322468997
+  },
+  {
+   "seed": 50077,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012298317503435683
+  },
+  {
+   "seed": 50078,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01312384087599408
+  },
+  {
+   "seed": 50079,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009949850162514007
+  },
+  {
+   "seed": 50080,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009028717911601066
+  },
+  {
+   "seed": 50081,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012788735647531548
+  },
+  {
+   "seed": 50082,
+   "success": true,
+   "steps": 128,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013643945351815035
+  },
+  {
+   "seed": 50083,
+   "success": true,
+   "steps": 145,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008867379489745126
+  },
+  {
+   "seed": 50084,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01863688046153991
+  },
+  {
+   "seed": 50085,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012843864444445328
+  },
+  {
+   "seed": 50086,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009434645372190305
+  },
+  {
+   "seed": 50087,
+   "success": true,
+   "steps": 134,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012268284201731499
+  },
+  {
+   "seed": 50088,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013320418832333727
+  },
+  {
+   "seed": 50089,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00874108471231989
+  },
+  {
+   "seed": 50090,
+   "success": true,
+   "steps": 134,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008313140526936576
+  },
+  {
+   "seed": 50091,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.004560261888382416
+  },
+  {
+   "seed": 50092,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013539236576037098
+  },
+  {
+   "seed": 50093,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013699098228304117
+  },
+  {
+   "seed": 50094,
+   "success": true,
+   "steps": 107,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008865936235661084
+  },
+  {
+   "seed": 50095,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012959775791260824
+  },
+  {
+   "seed": 50096,
+   "success": true,
+   "steps": 107,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010124557818438252
+  },
+  {
+   "seed": 50097,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005070476353769406
+  },
+  {
+   "seed": 50098,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.004392202033791077
+  },
+  {
+   "seed": 50099,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012033541753410119
+  },
+  {
+   "seed": 50100,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010492465681858224
+  },
+  {
+   "seed": 50101,
+   "success": true,
+   "steps": 142,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008527968184673341
+  },
+  {
+   "seed": 50102,
+   "success": true,
+   "steps": 138,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0019628844662586543
+  },
+  {
+   "seed": 50103,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015628288353335056
+  },
+  {
+   "seed": 50104,
+   "success": true,
+   "steps": 104,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01558298399131145
+  },
+  {
+   "seed": 50105,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014362403831611702
+  },
+  {
+   "seed": 50106,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013499288659570412
+  },
+  {
+   "seed": 50107,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018054351999740575
+  },
+  {
+   "seed": 50108,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012101926263277758
+  },
+  {
+   "seed": 50109,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008075699962352448
+  },
+  {
+   "seed": 50110,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014825447681110566
+  },
+  {
+   "seed": 50111,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008217477436121149
+  },
+  {
+   "seed": 50112,
+   "success": true,
+   "steps": 141,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01346303320342365
+  },
+  {
+   "seed": 50113,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012643660520672945
+  },
+  {
+   "seed": 50114,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00752914327480282
+  },
+  {
+   "seed": 50115,
+   "success": true,
+   "steps": 140,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005937256847518793
+  },
+  {
+   "seed": 50116,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012779538565505552
+  },
+  {
+   "seed": 50117,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01812476220444305
+  },
+  {
+   "seed": 50118,
+   "success": true,
+   "steps": 108,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012679005769337913
+  },
+  {
+   "seed": 50119,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006456062769897091
+  },
+  {
+   "seed": 50120,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008002578405667322
+  },
+  {
+   "seed": 50121,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016392756061587688
+  },
+  {
+   "seed": 50122,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008310360687479
+  },
+  {
+   "seed": 50123,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012153681227225576
+  },
+  {
+   "seed": 50124,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007972113865168965
+  },
+  {
+   "seed": 50125,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016026900630348312
+  },
+  {
+   "seed": 50126,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010965777593740096
+  },
+  {
+   "seed": 50127,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00678534307781483
+  },
+  {
+   "seed": 50128,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010041819420995857
+  },
+  {
+   "seed": 50129,
+   "success": true,
+   "steps": 131,
+   "lifted": true,
+   "final_cube_goal_dist": 0.002954326421685264
+  },
+  {
+   "seed": 50130,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018468077530920946
+  },
+  {
+   "seed": 50131,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010161803962498805
+  },
+  {
+   "seed": 50132,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01157866554951321
+  },
+  {
+   "seed": 50133,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006961452137703493
+  },
+  {
+   "seed": 50134,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00685546048018974
+  },
+  {
+   "seed": 50135,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010308279549114875
+  },
+  {
+   "seed": 50136,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01000814041970169
+  },
+  {
+   "seed": 50137,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010396314233786718
+  },
+  {
+   "seed": 50138,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015797841289514253
+  },
+  {
+   "seed": 50139,
+   "success": true,
+   "steps": 134,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007079786264762076
+  },
+  {
+   "seed": 50140,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01569917227261926
+  },
+  {
+   "seed": 50141,
+   "success": true,
+   "steps": 143,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00961464578920152
+  },
+  {
+   "seed": 50142,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015052229919777343
+  },
+  {
+   "seed": 50143,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011404305802945354
+  },
+  {
+   "seed": 50144,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011405758769188474
+  },
+  {
+   "seed": 50145,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013615557370691837
+  },
+  {
+   "seed": 50146,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015300297900021001
+  },
+  {
+   "seed": 50147,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.017397155632319052
+  },
+  {
+   "seed": 50148,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.020156991921519825
+  },
+  {
+   "seed": 50149,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010384732822398532
+  },
+  {
+   "seed": 50150,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007070818624101796
+  },
+  {
+   "seed": 50151,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0016293699873824177
+  },
+  {
+   "seed": 50152,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014332865171678618
+  },
+  {
+   "seed": 50153,
+   "success": true,
+   "steps": 145,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015095470489620087
+  },
+  {
+   "seed": 50154,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009988731861372106
+  },
+  {
+   "seed": 50155,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018288146650719185
+  },
+  {
+   "seed": 50156,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01152899657745398
+  },
+  {
+   "seed": 50157,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013197576419137037
+  },
+  {
+   "seed": 50158,
+   "success": true,
+   "steps": 106,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010481819091932708
+  },
+  {
+   "seed": 50159,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010002585185019034
+  },
+  {
+   "seed": 50160,
+   "success": true,
+   "steps": 108,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011359081712190548
+  },
+  {
+   "seed": 50161,
+   "success": true,
+   "steps": 146,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010065258717131662
+  },
+  {
+   "seed": 50162,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010774375936374899
+  },
+  {
+   "seed": 50163,
+   "success": true,
+   "steps": 134,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008198797951246565
+  },
+  {
+   "seed": 50164,
+   "success": true,
+   "steps": 99,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009175425427515788
+  },
+  {
+   "seed": 50165,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014108241814548218
+  },
+  {
+   "seed": 50166,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018722875290317458
+  },
+  {
+   "seed": 50167,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009031259149099788
+  },
+  {
+   "seed": 50168,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.018841323593261423
+  },
+  {
+   "seed": 50169,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01626148608282566
+  },
+  {
+   "seed": 50170,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.017529358405986732
+  },
+  {
+   "seed": 50171,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012863225373740642
+  },
+  {
+   "seed": 50172,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011498853508502146
+  },
+  {
+   "seed": 50173,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00957085910963609
+  },
+  {
+   "seed": 50174,
+   "success": true,
+   "steps": 131,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0035440326198556845
+  },
+  {
+   "seed": 50175,
+   "success": true,
+   "steps": 143,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007071459134369629
+  },
+  {
+   "seed": 50176,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012918289794221547
+  },
+  {
+   "seed": 50177,
+   "success": true,
+   "steps": 128,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014375307312597969
+  },
+  {
+   "seed": 50178,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013488584092223822
+  },
+  {
+   "seed": 50179,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010057008592107668
+  },
+  {
+   "seed": 50180,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014691567043538587
+  },
+  {
+   "seed": 50181,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012444490464658967
+  },
+  {
+   "seed": 50182,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006079413971166565
+  },
+  {
+   "seed": 50183,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015483731814601416
+  },
+  {
+   "seed": 50184,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0075921121460585965
+  },
+  {
+   "seed": 50185,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008349009665741402
+  },
+  {
+   "seed": 50186,
+   "success": true,
+   "steps": 136,
+   "lifted": true,
+   "final_cube_goal_dist": 0.002472439961423104
+  },
+  {
+   "seed": 50187,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010630372642234445
+  },
+  {
+   "seed": 50188,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011455681218143375
+  },
+  {
+   "seed": 50189,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012477231533896873
+  },
+  {
+   "seed": 50190,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0044835553663300125
+  },
+  {
+   "seed": 50191,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010604262271712102
+  },
+  {
+   "seed": 50192,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01445483733655306
+  },
+  {
+   "seed": 50193,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00810039370463376
+  },
+  {
+   "seed": 50194,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014258214379981624
+  },
+  {
+   "seed": 50195,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014209595209903388
+  },
+  {
+   "seed": 50196,
+   "success": true,
+   "steps": 101,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0071879856503873
+  },
+  {
+   "seed": 50197,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014065619869435426
+  },
+  {
+   "seed": 50198,
+   "success": true,
+   "steps": 108,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01344108680349307
+  },
+  {
+   "seed": 50199,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008126062172786077
+  },
+  {
+   "seed": 50200,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007166573202575125
+  },
+  {
+   "seed": 50201,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012339884151073446
+  },
+  {
+   "seed": 50202,
+   "success": true,
+   "steps": 104,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007704852091439113
+  },
+  {
+   "seed": 50203,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008957792777622514
+  },
+  {
+   "seed": 50204,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012530539538398854
+  },
+  {
+   "seed": 50205,
+   "success": true,
+   "steps": 125,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010620831000145159
+  },
+  {
+   "seed": 50206,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009788262146003352
+  },
+  {
+   "seed": 50207,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009748527495968554
+  },
+  {
+   "seed": 50208,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009788109707013428
+  },
+  {
+   "seed": 50209,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008063115543091375
+  },
+  {
+   "seed": 50210,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.003925838656777974
+  },
+  {
+   "seed": 50211,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012183395405771959
+  },
+  {
+   "seed": 50212,
+   "success": true,
+   "steps": 111,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014095994368146939
+  },
+  {
+   "seed": 50213,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007355401800987908
+  },
+  {
+   "seed": 50214,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00496779008460701
+  },
+  {
+   "seed": 50215,
+   "success": true,
+   "steps": 106,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011280234396949375
+  },
+  {
+   "seed": 50216,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015213740033445196
+  },
+  {
+   "seed": 50217,
+   "success": true,
+   "steps": 147,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0022781326010024934
+  },
+  {
+   "seed": 50218,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015128458917932583
+  },
+  {
+   "seed": 50219,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012857699130350595
+  },
+  {
+   "seed": 50220,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012416718134669425
+  },
+  {
+   "seed": 50221,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009397427949876897
+  },
+  {
+   "seed": 50222,
+   "success": true,
+   "steps": 110,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011880508312984964
+  },
+  {
+   "seed": 50223,
+   "success": true,
+   "steps": 107,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007101379093269166
+  },
+  {
+   "seed": 50224,
+   "success": true,
+   "steps": 142,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010812811964545772
+  },
+  {
+   "seed": 50225,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012139247430331132
+  },
+  {
+   "seed": 50226,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015511546689179138
+  },
+  {
+   "seed": 50227,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008374946536571634
+  },
+  {
+   "seed": 50228,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010974838940518388
+  },
+  {
+   "seed": 50229,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01350166366236049
+  },
+  {
+   "seed": 50230,
+   "success": true,
+   "steps": 122,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0035894213297172958
+  },
+  {
+   "seed": 50231,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01134886813726122
+  },
+  {
+   "seed": 50232,
+   "success": true,
+   "steps": 148,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01824260791797751
+  },
+  {
+   "seed": 50233,
+   "success": true,
+   "steps": 137,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015413683748042093
+  },
+  {
+   "seed": 50234,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01645103906303366
+  },
+  {
+   "seed": 50235,
+   "success": true,
+   "steps": 138,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012224530187493823
+  },
+  {
+   "seed": 50236,
+   "success": true,
+   "steps": 124,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007015737112688351
+  },
+  {
+   "seed": 50237,
+   "success": true,
+   "steps": 104,
+   "lifted": true,
+   "final_cube_goal_dist": 0.010271284468720046
+  },
+  {
+   "seed": 50238,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0108185000677652
+  },
+  {
+   "seed": 50239,
+   "success": true,
+   "steps": 130,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005154850592660655
+  },
+  {
+   "seed": 50240,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009148816786610007
+  },
+  {
+   "seed": 50241,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00931947034504583
+  },
+  {
+   "seed": 50242,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00891084450304733
+  },
+  {
+   "seed": 50243,
+   "success": true,
+   "steps": 146,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012202074571873828
+  },
+  {
+   "seed": 50244,
+   "success": true,
+   "steps": 110,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015710541660836536
+  },
+  {
+   "seed": 50245,
+   "success": true,
+   "steps": 145,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01446875984979498
+  },
+  {
+   "seed": 50246,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012411591812291116
+  },
+  {
+   "seed": 50247,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016718800152406583
+  },
+  {
+   "seed": 50248,
+   "success": true,
+   "steps": 101,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00907176852317106
+  },
+  {
+   "seed": 50249,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01634159056970884
+  },
+  {
+   "seed": 50250,
+   "success": true,
+   "steps": 117,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00865084502949284
+  },
+  {
+   "seed": 50251,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01346004205327787
+  },
+  {
+   "seed": 50252,
+   "success": true,
+   "steps": 135,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009321269273538775
+  },
+  {
+   "seed": 50253,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012924802877903064
+  },
+  {
+   "seed": 50254,
+   "success": true,
+   "steps": 114,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01162080179432218
+  },
+  {
+   "seed": 50255,
+   "success": true,
+   "steps": 141,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011766267526632245
+  },
+  {
+   "seed": 50256,
+   "success": true,
+   "steps": 129,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01369796741495017
+  },
+  {
+   "seed": 50257,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011739804684329702
+  },
+  {
+   "seed": 50258,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.016141286611579257
+  },
+  {
+   "seed": 50259,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.021746713748112077
+  },
+  {
+   "seed": 50260,
+   "success": true,
+   "steps": 102,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007147669355561805
+  },
+  {
+   "seed": 50261,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007729070061602825
+  },
+  {
+   "seed": 50262,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.004741395504295296
+  },
+  {
+   "seed": 50263,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006586730633085766
+  },
+  {
+   "seed": 50264,
+   "success": true,
+   "steps": 119,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012470557672322866
+  },
+  {
+   "seed": 50265,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01535962005857784
+  },
+  {
+   "seed": 50266,
+   "success": true,
+   "steps": 137,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009826380501401494
+  },
+  {
+   "seed": 50267,
+   "success": true,
+   "steps": 144,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012089030056349063
+  },
+  {
+   "seed": 50268,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.015553744538617619
+  },
+  {
+   "seed": 50269,
+   "success": true,
+   "steps": 118,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012968392672092311
+  },
+  {
+   "seed": 50270,
+   "success": true,
+   "steps": 105,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008606463089135473
+  },
+  {
+   "seed": 50271,
+   "success": true,
+   "steps": 120,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008228769041222014
+  },
+  {
+   "seed": 50272,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006979110950634916
+  },
+  {
+   "seed": 50273,
+   "success": true,
+   "steps": 110,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01555402413083473
+  },
+  {
+   "seed": 50274,
+   "success": true,
+   "steps": 112,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01021988480994977
+  },
+  {
+   "seed": 50275,
+   "success": true,
+   "steps": 100,
+   "lifted": true,
+   "final_cube_goal_dist": 0.009228631355998296
+  },
+  {
+   "seed": 50276,
+   "success": true,
+   "steps": 115,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007300228248566283
+  },
+  {
+   "seed": 50277,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014289014487390611
+  },
+  {
+   "seed": 50278,
+   "success": true,
+   "steps": 107,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013359768091529662
+  },
+  {
+   "seed": 50279,
+   "success": true,
+   "steps": 127,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014984381634685722
+  },
+  {
+   "seed": 50280,
+   "success": true,
+   "steps": 106,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008709815965567889
+  },
+  {
+   "seed": 50281,
+   "success": true,
+   "steps": 103,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008365581446531798
+  },
+  {
+   "seed": 50282,
+   "success": true,
+   "steps": 133,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012963593856097215
+  },
+  {
+   "seed": 50283,
+   "success": true,
+   "steps": 132,
+   "lifted": true,
+   "final_cube_goal_dist": 0.00565622872991276
+  },
+  {
+   "seed": 50284,
+   "success": true,
+   "steps": 139,
+   "lifted": true,
+   "final_cube_goal_dist": 0.0029085117876088275
+  },
+  {
+   "seed": 50285,
+   "success": true,
+   "steps": 140,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012185524338626397
+  },
+  {
+   "seed": 50286,
+   "success": true,
+   "steps": 128,
+   "lifted": true,
+   "final_cube_goal_dist": 0.008003677068708163
+  },
+  {
+   "seed": 50287,
+   "success": true,
+   "steps": 104,
+   "lifted": true,
+   "final_cube_goal_dist": 0.011950301736913112
+  },
+  {
+   "seed": 50288,
+   "success": true,
+   "steps": 100,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007829215139794362
+  },
+  {
+   "seed": 50289,
+   "success": true,
+   "steps": 137,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007501590616275118
+  },
+  {
+   "seed": 50290,
+   "success": true,
+   "steps": 113,
+   "lifted": true,
+   "final_cube_goal_dist": 0.007172412939771087
+  },
+  {
+   "seed": 50291,
+   "success": true,
+   "steps": 109,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013976141601660465
+  },
+  {
+   "seed": 50292,
+   "success": true,
+   "steps": 110,
+   "lifted": true,
+   "final_cube_goal_dist": 0.01140194667614105
+  },
+  {
+   "seed": 50293,
+   "success": true,
+   "steps": 140,
+   "lifted": true,
+   "final_cube_goal_dist": 0.006129801849996234
+  },
+  {
+   "seed": 50294,
+   "success": true,
+   "steps": 123,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014395243220823563
+  },
+  {
+   "seed": 50295,
+   "success": true,
+   "steps": 126,
+   "lifted": true,
+   "final_cube_goal_dist": 0.012905872242317125
+  },
+  {
+   "seed": 50296,
+   "success": true,
+   "steps": 121,
+   "lifted": true,
+   "final_cube_goal_dist": 0.005693557543362116
+  },
+  {
+   "seed": 50297,
+   "success": true,
+   "steps": 116,
+   "lifted": true,
+   "final_cube_goal_dist": 0.013891718248822689
+  },
+  {
+   "seed": 50298,
+   "success": true,
+   "steps": 107,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014196872042017932
+  },
+  {
+   "seed": 50299,
+   "success": true,
+   "steps": 106,
+   "lifted": true,
+   "final_cube_goal_dist": 0.014352861032217064
+  }
+ ]
+}
