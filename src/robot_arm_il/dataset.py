@@ -80,3 +80,17 @@ def split_episodes(
 
 def normalisation_stats(x: np.ndarray, eps: float = 1e-6) -> dict[str, np.ndarray]:
     return {"mean": x.mean(axis=0), "std": np.maximum(x.std(axis=0), eps)}
+
+
+def chunk_targets(demos: DemoSet, chunk: int) -> tuple[np.ndarray, np.ndarray]:
+    """For every frame, the next `chunk` actions and a mask that is False past the episode end.
+
+    Padding repeats the last action (the expert holds still at the end), but the mask removes it
+    from the loss, so the policy is never trained on made-up targets.
+    """
+    n = len(demos.actions)
+    idx = np.arange(n)[:, None] + np.arange(chunk)[None, :]  # (N, K)
+    ends = np.repeat(demos.episode_ends, np.diff(np.concatenate([[0], demos.episode_ends])))
+    mask = idx < ends[:, None]
+    idx = np.minimum(idx, ends[:, None] - 1)
+    return demos.actions[idx], mask

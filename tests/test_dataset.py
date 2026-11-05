@@ -5,6 +5,7 @@ import numpy as np
 from robot_arm_il.collect import main as collect_main
 from robot_arm_il.dataset import (
     build_demoset,
+    chunk_targets,
     load_demoset,
     normalisation_stats,
     save_demoset,
@@ -55,3 +56,14 @@ def test_collect_cli_writes_dataset_and_summary(tmp_path):
     summary = json.loads(out.with_suffix(".json").read_text())
     assert demos.n_episodes == summary["episodes_kept"] == 3
     assert summary["frames"] == len(demos.observations)
+
+
+def test_chunk_targets_follow_the_episode_and_mask_the_tail():
+    demos = build_demoset(_episodes(), [10, 11, 12])  # lengths 5, 7, 4
+    actions, mask = chunk_targets(demos, 3)
+    assert actions.shape == (16, 3, 6) and mask.shape == (16, 3)
+    assert np.allclose(actions[0, 1], demos.actions[1])
+    # last frame of episode 0: only the first slot is real, nothing from episode 1 leaks in
+    assert list(mask[4]) == [True, False, False]
+    assert np.allclose(actions[4, 1], demos.actions[4])
+    assert mask[:3].all() and list(mask[5 + 5]) == [True, True, False]
