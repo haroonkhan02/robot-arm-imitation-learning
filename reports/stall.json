@@ -1,0 +1,91 @@
+{
+ "copy": {
+  "0": 0.11834947764873505,
+  "1": 0.16119417548179626,
+  "5": 0.3281068503856659,
+  "10": 0.5195481181144714,
+  "19": 0.7938977479934692
+ },
+ "probes": {
+  "bc_clean": {
+   "checkpoint": "models/bc_clean.pt",
+   "ensemble": 0.01,
+   "episodes": 100,
+   "failures": 100,
+   "frozen_failures": 45,
+   "frozen_median_cube_goal_cm": 31.026038139640033,
+   "frozen_median_cube_z_cm": 1.9916932274777648,
+   "frozen_median_command_gap_rad": 0.009037072936557422
+  },
+  "bc_big": {
+   "checkpoint": "models/bc_big.pt",
+   "ensemble": 0.01,
+   "episodes": 100,
+   "failures": 100,
+   "frozen_failures": 6,
+   "frozen_median_cube_goal_cm": 26.872935260382974,
+   "frozen_median_cube_z_cm": 1.998668730237555,
+   "frozen_median_command_gap_rad": 0.010434315316096843
+  },
+  "bc_h12": {
+   "checkpoint": "models/bc_h12.pt",
+   "ensemble": 0.01,
+   "episodes": 100,
+   "failures": 100,
+   "frozen_failures": 13,
+   "frozen_median_cube_goal_cm": 5.4886155447912675,
+   "frozen_median_cube_z_cm": 5.303104419509316,
+   "frozen_median_command_gap_rad": 0.011563854843096522
+  },
+  "bc_h20": {
+   "checkpoint": "models/bc_h20.pt",
+   "ensemble": 0.01,
+   "episodes": 100,
+   "failures": 38,
+   "frozen_failures": 0,
+   "frozen_median_cube_goal_cm": null,
+   "frozen_median_cube_z_cm": null,
+   "frozen_median_command_gap_rad": null
+  },
+  "bc_k20 (newest chunk)": {
+   "checkpoint": "models/bc_k20.pt",
+   "ensemble": -1000.0,
+   "episodes": 100,
+   "failures": 63,
+   "frozen_failures": 7,
+   "frozen_median_cube_goal_cm": 30.475747538125013,
+   "frozen_median_cube_z_cm": 1.9957677954171047,
+   "frozen_median_command_gap_rad": 0.010760607437433123
+  },
+  "bc_k20": {
+   "checkpoint": "models/bc_k20.pt",
+   "ensemble": 0.01,
+   "episodes": 100,
+   "failures": 9,
+   "frozen_failures": 0,
+   "frozen_median_cube_goal_cm": null,
+   "frozen_median_cube_z_cm": null,
+   "frozen_median_command_gap_rad": null
+  },
+  "act_clean (newest chunk)": {
+   "checkpoint": "models/act_clean.pt",
+   "ensemble": -1000.0,
+   "episodes": 100,
+   "failures": 18,
+   "frozen_failures": 2,
+   "frozen_median_cube_goal_cm": 2.710004754624933,
+   "frozen_median_cube_z_cm": 1.9986687302375559,
+   "frozen_median_command_gap_rad": 0.013618845754489683
+  },
+  "act_clean": {
+   "checkpoint": "models/act_clean.pt",
+   "ensemble": 0.01,
+   "episodes": 100,
+   "failures": 0,
+   "frozen_failures": 0,
+   "frozen_median_cube_goal_cm": null,
+   "frozen_median_cube_z_cm": null,
+   "frozen_median_command_gap_rad": null
+  }
+ }
+}

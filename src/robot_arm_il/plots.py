@@ -37,6 +37,7 @@ OUTCOME_RUNS = [
     ("act_k5", "ACT, chunk 5"),
     ("act_clean", "ACT, chunk 20"),
     ("act_clean_newest", "ACT, chunk 20, newest"),
+    ("act_last", "ACT, chunk 20, final epoch"),
 ]
 
 

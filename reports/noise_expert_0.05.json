@@ -1,0 +1,7 @@
+{
+  "episodes": 300,
+  "seed_start": 50000,
+  "exec_noise": 0.05,
+  "success_rate": 0.47,
+  "mean_episode_steps": 183.84666666666666
+}

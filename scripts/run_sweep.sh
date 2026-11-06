@@ -15,4 +15,4 @@ for pol in bc act; do
   ra-train --policy $pol --demos data/demos_noisy.npz --epochs $ep --out models/${pol}_noisy.pt > outputs/train_${pol}_noisy.log 2>&1
   ra-policy-eval --ckpt models/${pol}_noisy.pt --episodes 300 --out reports/eval_${pol}_noisy.json
 done
-ra-policy-eval --ckpt models/act_clean.pt --episodes 300 --ensemble -1000 --out reports/eval_act_clean_noensemble.json
+ra-policy-eval --ckpt models/act_clean.pt --episodes 300 --ensemble -1000 --out reports/eval_act_clean_newest.json

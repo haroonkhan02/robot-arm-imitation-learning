@@ -1,0 +1,1614 @@
+{
+ "runs": {
+  "act_clean": {
+   "name": "act_clean",
+   "episodes": 300,
+   "success": 1.0,
+   "ci95": [
+    0.9873565700022643,
+    1.0
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 0,
+    "success": 300
+   }
+  },
+  "act_clean_decay0.1": {
+   "name": "act_clean_decay0.1",
+   "episodes": 300,
+   "success": 0.9966666666666667,
+   "ci95": [
+    0.9813628354450568,
+    0.9994113574238592
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 1,
+    "success": 299
+   }
+  },
+  "act_clean_decay0.3": {
+   "name": "act_clean_decay0.3",
+   "episodes": 300,
+   "success": 0.9833333333333333,
+   "ci95": [
+    0.9615840563782944,
+    0.9928606279572277
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 5,
+    "success": 295
+   }
+  },
+  "act_clean_decay1": {
+   "name": "act_clean_decay1",
+   "episodes": 300,
+   "success": 0.9066666666666666,
+   "ci95": [
+    0.8684138011961098,
+    0.9346362090723985
+   ],
+   "lifted": 0.9833333333333333,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 5,
+    "at_goal": 5,
+    "released": 5,
+    "settled": 13,
+    "success": 272
+   }
+  },
+  "act_clean_newest": {
+   "name": "act_clean_newest",
+   "episodes": 300,
+   "success": 0.84,
+   "ci95": [
+    0.7942554091313135,
+    0.8771470584702262
+   ],
+   "lifted": 0.9766666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 7,
+    "at_goal": 9,
+    "released": 8,
+    "settled": 24,
+    "success": 252
+   }
+  },
+  "act_clean_s1": {
+   "name": "act_clean_s1",
+   "episodes": 300,
+   "success": 0.97,
+   "ci95": [
+    0.943976849008093,
+    0.9841383267940355
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 2,
+    "released": 0,
+    "settled": 7,
+    "success": 291
+   }
+  },
+  "act_clean_s1_newest": {
+   "name": "act_clean_s1_newest",
+   "episodes": 300,
+   "success": 0.08333333333333333,
+   "ci95": [
+    0.05708047735632001,
+    0.12012238097512637
+   ],
+   "lifted": 0.2733333333333333,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 3,
+    "lifted": 215,
+    "at_goal": 21,
+    "released": 14,
+    "settled": 22,
+    "success": 25
+   }
+  },
+  "act_clean_s2": {
+   "name": "act_clean_s2",
+   "episodes": 300,
+   "success": 1.0,
+   "ci95": [
+    0.9873565700022643,
+    1.0
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 0,
+    "success": 300
+   }
+  },
+  "act_clean_s2_newest": {
+   "name": "act_clean_s2_newest",
+   "episodes": 300,
+   "success": 0.013333333333333334,
+   "ci95": [
+    0.005196877684679467,
+    0.03377606084644991
+   ],
+   "lifted": 0.30333333333333334,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 209,
+    "at_goal": 72,
+    "released": 11,
+    "settled": 4,
+    "success": 4
+   }
+  },
+  "act_k1": {
+   "name": "act_k1",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.08,
+   "outcomes": {
+    "reached": 121,
+    "grasped": 155,
+    "lifted": 2,
+    "at_goal": 21,
+    "released": 1,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "act_k10": {
+   "name": "act_k10",
+   "episodes": 300,
+   "success": 0.9633333333333334,
+   "ci95": [
+    0.9355455130036123,
+    0.9794049085318193
+   ],
+   "lifted": 0.9833333333333333,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 5,
+    "at_goal": 4,
+    "released": 0,
+    "settled": 2,
+    "success": 289
+   }
+  },
+  "act_k10_newest": {
+   "name": "act_k10_newest",
+   "episodes": 300,
+   "success": 0.24,
+   "ci95": [
+    0.1951523988530105,
+    0.29142218474581205
+   ],
+   "lifted": 0.38333333333333336,
+   "outcomes": {
+    "reached": 12,
+    "grasped": 2,
+    "lifted": 173,
+    "at_goal": 18,
+    "released": 17,
+    "settled": 6,
+    "success": 72
+   }
+  },
+  "act_k5": {
+   "name": "act_k5",
+   "episodes": 300,
+   "success": 0.55,
+   "ci95": [
+    0.4934245664818429,
+    0.6053110905183835
+   ],
+   "lifted": 0.9866666666666667,
+   "outcomes": {
+    "reached": 1,
+    "grasped": 0,
+    "lifted": 4,
+    "at_goal": 98,
+    "released": 1,
+    "settled": 31,
+    "success": 165
+   }
+  },
+  "act_k5_newest": {
+   "name": "act_k5_newest",
+   "episodes": 300,
+   "success": 0.05333333333333334,
+   "ci95": [
+    0.03309162538404202,
+    0.08486983874726851
+   ],
+   "lifted": 0.4,
+   "outcomes": {
+    "reached": 10,
+    "grasped": 0,
+    "lifted": 179,
+    "at_goal": 80,
+    "released": 8,
+    "settled": 7,
+    "success": 16
+   }
+  },
+  "act_k5_s1": {
+   "name": "act_k5_s1",
+   "episodes": 300,
+   "success": 0.5666666666666667,
+   "ci95": [
+    0.5100978801359048,
+    0.6215496625310637
+   ],
+   "lifted": 0.9966666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 1,
+    "at_goal": 60,
+    "released": 2,
+    "settled": 67,
+    "success": 170
+   }
+  },
+  "act_k5_s1_newest": {
+   "name": "act_k5_s1_newest",
+   "episodes": 300,
+   "success": 0.5766666666666667,
+   "ci95": [
+    0.5201322236304367,
+    0.6312624504365771
+   ],
+   "lifted": 0.8833333333333333,
+   "outcomes": {
+    "reached": 11,
+    "grasped": 0,
+    "lifted": 24,
+    "at_goal": 65,
+    "released": 2,
+    "settled": 25,
+    "success": 173
+   }
+  },
+  "act_k5_s2": {
+   "name": "act_k5_s2",
+   "episodes": 300,
+   "success": 0.02666666666666667,
+   "ci95": [
+    0.013572906766976815,
+    0.051729540297546284
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 235,
+    "released": 4,
+    "settled": 53,
+    "success": 8
+   }
+  },
+  "act_k5_s2_newest": {
+   "name": "act_k5_s2_newest",
+   "episodes": 300,
+   "success": 0.03666666666666667,
+   "ci95": [
+    0.02059509146818067,
+    0.06445448699638771
+   ],
+   "lifted": 0.9266666666666666,
+   "outcomes": {
+    "reached": 2,
+    "grasped": 0,
+    "lifted": 20,
+    "at_goal": 228,
+    "released": 21,
+    "settled": 18,
+    "success": 11
+   }
+  },
+  "act_last": {
+   "name": "act_last",
+   "episodes": 300,
+   "success": 0.08333333333333333,
+   "ci95": [
+    0.05708047735632001,
+    0.12012238097512637
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 216,
+    "released": 0,
+    "settled": 59,
+    "success": 25
+   }
+  },
+  "act_last_newest": {
+   "name": "act_last_newest",
+   "episodes": 300,
+   "success": 0.006666666666666667,
+   "ci95": [
+    0.0018301100329710784,
+    0.023978074231461442
+   ],
+   "lifted": 0.5833333333333334,
+   "outcomes": {
+    "reached": 2,
+    "grasped": 2,
+    "lifted": 123,
+    "at_goal": 106,
+    "released": 30,
+    "settled": 35,
+    "success": 2
+   }
+  },
+  "act_last_s1": {
+   "name": "act_last_s1",
+   "episodes": 300,
+   "success": 0.08333333333333333,
+   "ci95": [
+    0.05708047735632001,
+    0.12012238097512637
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 226,
+    "released": 0,
+    "settled": 49,
+    "success": 25
+   }
+  },
+  "act_last_s1_newest": {
+   "name": "act_last_s1_newest",
+   "episodes": 300,
+   "success": 0.0033333333333333335,
+   "ci95": [
+    0.0005886425761407379,
+    0.018637164554943353
+   ],
+   "lifted": 0.65,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 105,
+    "at_goal": 163,
+    "released": 21,
+    "settled": 10,
+    "success": 1
+   }
+  },
+  "act_last_s2": {
+   "name": "act_last_s2",
+   "episodes": 300,
+   "success": 0.1,
+   "ci95": [
+    0.07094746564722294,
+    0.1391672783509656
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 237,
+    "released": 0,
+    "settled": 33,
+    "success": 30
+   }
+  },
+  "act_last_s2_newest": {
+   "name": "act_last_s2_newest",
+   "episodes": 300,
+   "success": 0.016666666666666666,
+   "ci95": [
+    0.0071393720427721935,
+    0.038415943621705605
+   ],
+   "lifted": 0.7433333333333333,
+   "outcomes": {
+    "reached": 6,
+    "grasped": 0,
+    "lifted": 71,
+    "at_goal": 104,
+    "released": 41,
+    "settled": 73,
+    "success": 5
+   }
+  },
+  "act_n10": {
+   "name": "act_n10",
+   "episodes": 300,
+   "success": 0.15,
+   "ci95": [
+    0.1140318876347062,
+    0.19481851336370873
+   ],
+   "lifted": 0.43333333333333335,
+   "outcomes": {
+    "reached": 178,
+    "grasped": 15,
+    "lifted": 7,
+    "at_goal": 42,
+    "released": 1,
+    "settled": 12,
+    "success": 45
+   }
+  },
+  "act_n10_s1": {
+   "name": "act_n10_s1",
+   "episodes": 300,
+   "success": 0.56,
+   "ci95": [
+    0.503420997979743,
+    0.6150617904205289
+   ],
+   "lifted": 0.84,
+   "outcomes": {
+    "reached": 48,
+    "grasped": 7,
+    "lifted": 2,
+    "at_goal": 32,
+    "released": 0,
+    "settled": 43,
+    "success": 168
+   }
+  },
+  "act_n10_s2": {
+   "name": "act_n10_s2",
+   "episodes": 300,
+   "success": 0.3233333333333333,
+   "ci95": [
+    0.27292452032605247,
+    0.3782094916064807
+   ],
+   "lifted": 0.8,
+   "outcomes": {
+    "reached": 65,
+    "grasped": 7,
+    "lifted": 6,
+    "at_goal": 95,
+    "released": 0,
+    "settled": 30,
+    "success": 97
+   }
+  },
+  "act_n120": {
+   "name": "act_n120",
+   "episodes": 300,
+   "success": 0.9733333333333334,
+   "ci95": [
+    0.9482704597024538,
+    0.9864270932330232
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 8,
+    "success": 292
+   }
+  },
+  "act_n20": {
+   "name": "act_n20",
+   "episodes": 300,
+   "success": 0.72,
+   "ci95": [
+    0.6666550937163631,
+    0.7677817970846332
+   ],
+   "lifted": 0.9366666666666666,
+   "outcomes": {
+    "reached": 21,
+    "grasped": 10,
+    "lifted": 1,
+    "at_goal": 21,
+    "released": 0,
+    "settled": 31,
+    "success": 216
+   }
+  },
+  "act_n20_s1": {
+   "name": "act_n20_s1",
+   "episodes": 300,
+   "success": 0.8133333333333334,
+   "ci95": [
+    0.7653802718106468,
+    0.8533631787241056
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 2,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 19,
+    "released": 0,
+    "settled": 35,
+    "success": 244
+   }
+  },
+  "act_n20_s2": {
+   "name": "act_n20_s2",
+   "episodes": 300,
+   "success": 0.7666666666666667,
+   "ci95": [
+    0.7156176619060443,
+    0.8109725087618301
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 5,
+    "lifted": 0,
+    "at_goal": 12,
+    "released": 0,
+    "settled": 53,
+    "success": 230
+   }
+  },
+  "act_n50": {
+   "name": "act_n50",
+   "episodes": 300,
+   "success": 0.99,
+   "ci95": [
+    0.9710159953649371,
+    0.9965934432372818
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 3,
+    "success": 297
+   }
+  },
+  "act_n50_s1": {
+   "name": "act_n50_s1",
+   "episodes": 300,
+   "success": 0.9833333333333333,
+   "ci95": [
+    0.9615840563782944,
+    0.9928606279572277
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 1,
+    "released": 0,
+    "settled": 4,
+    "success": 295
+   }
+  },
+  "act_n50_s2": {
+   "name": "act_n50_s2",
+   "episodes": 300,
+   "success": 0.99,
+   "ci95": [
+    0.9710159953649371,
+    0.9965934432372818
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 3,
+    "success": 297
+   }
+  },
+  "act_noisy": {
+   "name": "act_noisy",
+   "episodes": 300,
+   "success": 1.0,
+   "ci95": [
+    0.9873565700022643,
+    1.0
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 0,
+    "success": 300
+   }
+  },
+  "bc_big": {
+   "name": "bc_big",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.0033333333333333335,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 299,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 1,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_clean": {
+   "name": "bc_clean",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.02666666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 67,
+    "lifted": 225,
+    "at_goal": 6,
+    "released": 2,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_clean_s1": {
+   "name": "bc_clean_s1",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.13333333333333333,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 43,
+    "lifted": 217,
+    "at_goal": 7,
+    "released": 26,
+    "settled": 7,
+    "success": 0
+   }
+  },
+  "bc_clean_s2": {
+   "name": "bc_clean_s2",
+   "episodes": 300,
+   "success": 0.0033333333333333335,
+   "ci95": [
+    0.0005886425761407379,
+    0.018637164554943353
+   ],
+   "lifted": 0.28,
+   "outcomes": {
+    "reached": 3,
+    "grasped": 12,
+    "lifted": 201,
+    "at_goal": 6,
+    "released": 38,
+    "settled": 39,
+    "success": 1
+   }
+  },
+  "bc_h12": {
+   "name": "bc_h12",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 33,
+    "released": 267,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_h12_k20": {
+   "name": "bc_h12_k20",
+   "episodes": 300,
+   "success": 0.5566666666666666,
+   "ci95": [
+    0.5000863411296723,
+    0.611814070137251
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 126,
+    "released": 0,
+    "settled": 7,
+    "success": 167
+   }
+  },
+  "bc_h12_k20_newest": {
+   "name": "bc_h12_k20_newest",
+   "episodes": 300,
+   "success": 0.6833333333333333,
+   "ci95": [
+    0.6286582253552765,
+    0.7333725169788871
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 89,
+    "released": 0,
+    "settled": 6,
+    "success": 205
+   }
+  },
+  "bc_h2": {
+   "name": "bc_h2",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.5466666666666666,
+   "outcomes": {
+    "reached": 16,
+    "grasped": 0,
+    "lifted": 120,
+    "at_goal": 25,
+    "released": 139,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_h20": {
+   "name": "bc_h20",
+   "episodes": 300,
+   "success": 0.65,
+   "ci95": [
+    0.594438067475952,
+    0.7017689035247274
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 95,
+    "released": 0,
+    "settled": 10,
+    "success": 195
+   }
+  },
+  "bc_h4": {
+   "name": "bc_h4",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.006666666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 298,
+    "at_goal": 0,
+    "released": 2,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_h8": {
+   "name": "bc_h8",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 57,
+    "released": 243,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_k20": {
+   "name": "bc_k20",
+   "episodes": 300,
+   "success": 0.9133333333333333,
+   "ci95": [
+    0.8760432544899761,
+    0.940171510045229
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 13,
+    "released": 0,
+    "settled": 13,
+    "success": 274
+   }
+  },
+  "bc_k20_decay0.1": {
+   "name": "bc_k20_decay0.1",
+   "episodes": 300,
+   "success": 0.9166666666666666,
+   "ci95": [
+    0.8798776190248736,
+    0.94291952264368
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 12,
+    "released": 0,
+    "settled": 13,
+    "success": 275
+   }
+  },
+  "bc_k20_decay0.3": {
+   "name": "bc_k20_decay0.3",
+   "episodes": 300,
+   "success": 0.9133333333333333,
+   "ci95": [
+    0.8760432544899761,
+    0.940171510045229
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 8,
+    "released": 0,
+    "settled": 18,
+    "success": 274
+   }
+  },
+  "bc_k20_decay1": {
+   "name": "bc_k20_decay1",
+   "episodes": 300,
+   "success": 0.65,
+   "ci95": [
+    0.594438067475952,
+    0.7017689035247274
+   ],
+   "lifted": 0.98,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 6,
+    "at_goal": 3,
+    "released": 77,
+    "settled": 19,
+    "success": 195
+   }
+  },
+  "bc_k20_newest": {
+   "name": "bc_k20_newest",
+   "episodes": 300,
+   "success": 0.4,
+   "ci95": [
+    0.3461642362605155,
+    0.4563644497390317
+   ],
+   "lifted": 0.5766666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 127,
+    "at_goal": 16,
+    "released": 12,
+    "settled": 25,
+    "success": 120
+   }
+  },
+  "bc_k20_s1": {
+   "name": "bc_k20_s1",
+   "episodes": 300,
+   "success": 0.9,
+   "ci95": [
+    0.8608327216490343,
+    0.9290525343527771
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 24,
+    "released": 0,
+    "settled": 6,
+    "success": 270
+   }
+  },
+  "bc_k20_s1_newest": {
+   "name": "bc_k20_s1_newest",
+   "episodes": 300,
+   "success": 0.24,
+   "ci95": [
+    0.1951523988530105,
+    0.29142218474581205
+   ],
+   "lifted": 0.91,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 27,
+    "at_goal": 4,
+    "released": 197,
+    "settled": 0,
+    "success": 72
+   }
+  },
+  "bc_k20_s2": {
+   "name": "bc_k20_s2",
+   "episodes": 300,
+   "success": 0.8066666666666666,
+   "ci95": [
+    0.7582152889916499,
+    0.8473634072764055
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 36,
+    "released": 14,
+    "settled": 8,
+    "success": 242
+   }
+  },
+  "bc_k20_s2_newest": {
+   "name": "bc_k20_s2_newest",
+   "episodes": 300,
+   "success": 0.6433333333333333,
+   "ci95": [
+    0.5876287210234448,
+    0.6954134957105376
+   ],
+   "lifted": 0.7766666666666666,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 67,
+    "at_goal": 20,
+    "released": 12,
+    "settled": 8,
+    "success": 193
+   }
+  },
+  "bc_k5": {
+   "name": "bc_k5",
+   "episodes": 300,
+   "success": 0.9666666666666667,
+   "ci95": [
+    0.9397375485424309,
+    0.9817952501263492
+   ],
+   "lifted": 0.9966666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 1,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 9,
+    "success": 290
+   }
+  },
+  "bc_k5_newest": {
+   "name": "bc_k5_newest",
+   "episodes": 300,
+   "success": 0.41,
+   "ci95": [
+    0.3558229870903305,
+    0.4664528303092618
+   ],
+   "lifted": 0.78,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 66,
+    "at_goal": 10,
+    "released": 79,
+    "settled": 22,
+    "success": 123
+   }
+  },
+  "bc_k5_s1": {
+   "name": "bc_k5_s1",
+   "episodes": 300,
+   "success": 0.99,
+   "ci95": [
+    0.9710159953649371,
+    0.9965934432372818
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 3,
+    "success": 297
+   }
+  },
+  "bc_k5_s1_newest": {
+   "name": "bc_k5_s1_newest",
+   "episodes": 300,
+   "success": 0.22333333333333333,
+   "ci95": [
+    0.1798706282757476,
+    0.27379206965633285
+   ],
+   "lifted": 0.9633333333333334,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 11,
+    "at_goal": 0,
+    "released": 212,
+    "settled": 10,
+    "success": 67
+   }
+  },
+  "bc_k5_s2": {
+   "name": "bc_k5_s2",
+   "episodes": 300,
+   "success": 0.72,
+   "ci95": [
+    0.6666550937163631,
+    0.7677817970846332
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 79,
+    "settled": 5,
+    "success": 216
+   }
+  },
+  "bc_k5_s2_newest": {
+   "name": "bc_k5_s2_newest",
+   "episodes": 300,
+   "success": 0.31666666666666665,
+   "ci95": [
+    0.2666274830211129,
+    0.37134177464472345
+   ],
+   "lifted": 0.6866666666666666,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 94,
+    "at_goal": 2,
+    "released": 94,
+    "settled": 15,
+    "success": 95
+   }
+  },
+  "bc_n10": {
+   "name": "bc_n10",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.006666666666666667,
+   "outcomes": {
+    "reached": 249,
+    "grasped": 41,
+    "lifted": 9,
+    "at_goal": 1,
+    "released": 0,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "bc_n120": {
+   "name": "bc_n120",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.5366666666666666,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 4,
+    "lifted": 135,
+    "at_goal": 30,
+    "released": 49,
+    "settled": 82,
+    "success": 0
+   }
+  },
+  "bc_n20": {
+   "name": "bc_n20",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.22333333333333333,
+   "outcomes": {
+    "reached": 110,
+    "grasped": 38,
+    "lifted": 88,
+    "at_goal": 17,
+    "released": 38,
+    "settled": 9,
+    "success": 0
+   }
+  },
+  "bc_n50": {
+   "name": "bc_n50",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.5333333333333333,
+   "outcomes": {
+    "reached": 4,
+    "grasped": 15,
+    "lifted": 121,
+    "at_goal": 40,
+    "released": 78,
+    "settled": 42,
+    "success": 0
+   }
+  },
+  "bc_noisy": {
+   "name": "bc_noisy",
+   "episodes": 300,
+   "success": 0.0,
+   "ci95": [
+    0.0,
+    0.012643429997735661
+   ],
+   "lifted": 0.013333333333333334,
+   "outcomes": {
+    "reached": 1,
+    "grasped": 223,
+    "lifted": 72,
+    "at_goal": 1,
+    "released": 3,
+    "settled": 0,
+    "success": 0
+   }
+  },
+  "noise_act_clean_0.01": {
+   "name": "noise_act_clean_0.01",
+   "episodes": 300,
+   "success": 0.9566666666666667,
+   "ci95": [
+    0.927281870871939,
+    0.9745037963967957
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 3,
+    "released": 1,
+    "settled": 9,
+    "success": 287
+   }
+  },
+  "noise_act_clean_0.02": {
+   "name": "noise_act_clean_0.02",
+   "episodes": 300,
+   "success": 0.6733333333333333,
+   "ci95": [
+    0.6183611701576165,
+    0.7239224407765018
+   ],
+   "lifted": 0.9633333333333334,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 1,
+    "lifted": 10,
+    "at_goal": 32,
+    "released": 3,
+    "settled": 52,
+    "success": 202
+   }
+  },
+  "noise_act_clean_0.03": {
+   "name": "noise_act_clean_0.03",
+   "episodes": 300,
+   "success": 0.52,
+   "ci95": [
+    0.46357005360167935,
+    0.5759242091984114
+   ],
+   "lifted": 0.9066666666666666,
+   "outcomes": {
+    "reached": 2,
+    "grasped": 9,
+    "lifted": 20,
+    "at_goal": 58,
+    "released": 4,
+    "settled": 51,
+    "success": 156
+   }
+  },
+  "noise_act_clean_0.05": {
+   "name": "noise_act_clean_0.05",
+   "episodes": 300,
+   "success": 0.22333333333333333,
+   "ci95": [
+    0.1798706282757476,
+    0.27379206965633285
+   ],
+   "lifted": 0.77,
+   "outcomes": {
+    "reached": 10,
+    "grasped": 32,
+    "lifted": 32,
+    "at_goal": 110,
+    "released": 2,
+    "settled": 47,
+    "success": 67
+   }
+  },
+  "noise_act_noisy_0.01": {
+   "name": "noise_act_noisy_0.01",
+   "episodes": 300,
+   "success": 0.9833333333333333,
+   "ci95": [
+    0.9615840563782944,
+    0.9928606279572277
+   ],
+   "lifted": 1.0,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 0,
+    "at_goal": 0,
+    "released": 0,
+    "settled": 5,
+    "success": 295
+   }
+  },
+  "noise_act_noisy_0.02": {
+   "name": "noise_act_noisy_0.02",
+   "episodes": 300,
+   "success": 0.8666666666666667,
+   "ci95": [
+    0.8235273610289742,
+    0.9005341236393531
+   ],
+   "lifted": 0.9966666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 0,
+    "lifted": 1,
+    "at_goal": 4,
+    "released": 0,
+    "settled": 35,
+    "success": 260
+   }
+  },
+  "noise_act_noisy_0.03": {
+   "name": "noise_act_noisy_0.03",
+   "episodes": 300,
+   "success": 0.6733333333333333,
+   "ci95": [
+    0.6183611701576165,
+    0.7239224407765018
+   ],
+   "lifted": 0.9866666666666667,
+   "outcomes": {
+    "reached": 0,
+    "grasped": 2,
+    "lifted": 4,
+    "at_goal": 35,
+    "released": 0,
+    "settled": 57,
+    "success": 202
+   }
+  },
+  "noise_act_noisy_0.05": {
+   "name": "noise_act_noisy_0.05",
+   "episodes": 300,
+   "success": 0.31666666666666665,
+   "ci95": [
+    0.2666274830211129,
+    0.37134177464472345
+   ],
+   "lifted": 0.8266666666666667,
+   "outcomes": {
+    "reached": 6,
+    "grasped": 25,
+    "lifted": 25,
+    "at_goal": 91,
+    "released": 0,
+    "settled": 58,
+    "success": 95
+   }
+  }
+ },
+ "seeds": {
+  "bc_clean": [
+   0.0,
+   0.0,
+   0.0033333333333333335
+  ],
+  "bc_k20": [
+   0.9133333333333333,
+   0.9,
+   0.8066666666666666
+  ],
+  "bc_k20_newest": [
+   0.4,
+   0.24,
+   0.6433333333333333
+  ],
+  "act_clean": [
+   1.0,
+   0.97,
+   1.0
+  ],
+  "act_clean_newest": [
+   0.84,
+   0.08333333333333333,
+   0.013333333333333334
+  ],
+  "bc_k5": [
+   0.9666666666666667,
+   0.99,
+   0.72
+  ],
+  "bc_k5_newest": [
+   0.41,
+   0.22333333333333333,
+   0.31666666666666665
+  ],
+  "act_k5": [
+   0.55,
+   0.5666666666666667,
+   0.02666666666666667
+  ],
+  "act_k5_newest": [
+   0.05333333333333334,
+   0.5766666666666667,
+   0.03666666666666667
+  ],
+  "act_last": [
+   0.08333333333333333,
+   0.08333333333333333,
+   0.1
+  ],
+  "act_last_newest": [
+   0.006666666666666667,
+   0.0033333333333333335,
+   0.016666666666666666
+  ],
+  "act_n10": [
+   0.15,
+   0.56,
+   0.3233333333333333
+  ],
+  "act_n20": [
+   0.72,
+   0.8133333333333334,
+   0.7666666666666667
+  ],
+  "act_n50": [
+   0.99,
+   0.9833333333333333,
+   0.99
+  ]
+ },
+ "coverage": {
+  "act_n10": {
+   "auc_cube": 0.6043572984749456,
+   "auc_goal": 0.5685403050108933,
+   "median_cube_cm": {
+    "success": 2.262466339176038,
+    "failure": 2.8812706094439977
+   },
+   "median_goal_cm": {
+    "success": 2.271268491865365,
+    "failure": 2.928793920371282
+   }
+  },
+  "act_n10_s1": {
+   "auc_cube": 0.6064664502164502,
+   "auc_goal": 0.5260191197691197,
+   "median_cube_cm": {
+    "success": 2.8064018579955454,
+    "failure": 4.050498449358811
+   },
+   "median_goal_cm": {
+    "success": 2.347468040920811,
+    "failure": 2.4885525431255116
+   }
+  },
+  "act_n10_s2": {
+   "auc_cube": 0.5234878878675537,
+   "auc_goal": 0.6499923823066376,
+   "median_cube_cm": {
+    "success": 2.579112843962989,
+    "failure": 2.8341540569912316
+   },
+   "median_goal_cm": {
+    "success": 1.8693694815350568,
+    "failure": 2.5006454898072206
+   }
+  },
+  "act_n20": {
+   "auc_cube": 0.5934744268077602,
+   "auc_goal": 0.6401565255731922,
+   "median_cube_cm": {
+    "success": 1.9013739207589493,
+    "failure": 2.1719165114943007
+   },
+   "median_goal_cm": {
+    "success": 1.4714707183800992,
+    "failure": 2.129877401868515
+   }
+  },
+  "act_n20_s1": {
+   "auc_cube": 0.49173009367681497,
+   "auc_goal": 0.5324941451990632,
+   "median_cube_cm": {
+    "success": 1.8256792866926657,
+    "failure": 1.642068031007672
+   },
+   "median_goal_cm": {
+    "success": 1.6234646225061267,
+    "failure": 1.8049743268945306
+   }
+  },
+  "act_n20_s2": {
+   "auc_cube": 0.5312422360248448,
+   "auc_goal": 0.5440372670807453,
+   "median_cube_cm": {
+    "success": 1.7822340939071986,
+    "failure": 1.9383092244925764
+   },
+   "median_goal_cm": {
+    "success": 1.638378371851445,
+    "failure": 1.758362588180707
+   }
+  },
+  "act_n50": {
+   "auc_cube": 0.8529741863075196,
+   "auc_goal": 0.6038159371492705,
+   "median_cube_cm": {
+    "success": 1.1020792025493351,
+    "failure": 2.1298497686445703
+   },
+   "median_goal_cm": {
+    "success": 1.0777293701741562,
+    "failure": 1.5940023256610698
+   }
+  },
+  "act_n50_s1": {
+   "auc_cube": 0.7152542372881356,
+   "auc_goal": 0.41423728813559324,
+   "median_cube_cm": {
+    "success": 1.1710398630679246,
+    "failure": 1.313689499447264
+   },
+   "median_goal_cm": {
+    "success": 1.0466649818536378,
+    "failure": 0.8903686331436315
+   }
+  },
+  "act_n50_s2": {
+   "auc_cube": 0.4399551066217733,
+   "auc_goal": 0.43434343434343436,
+   "median_cube_cm": {
+    "success": 1.1911206409588067,
+    "failure": 0.8836462795002397
+   },
+   "median_goal_cm": {
+    "success": 1.0396161071040724,
+    "failure": 0.9950872287337101
+   }
+  }
+ },
+ "noise": {
+  "0.01": {
+   "expert": 1.0,
+   "act_clean": 0.9566666666666667,
+   "act_noisy": 0.9833333333333333
+  },
+  "0.02": {
+   "expert": 0.96,
+   "act_clean": 0.6733333333333333,
+   "act_noisy": 0.8666666666666667
+  },
+  "0.03": {
+   "expert": 0.8466666666666667,
+   "act_clean": 0.52,
+   "act_noisy": 0.6733333333333333
+  },
+  "0.05": {
+   "expert": 0.47,
+   "act_clean": 0.22333333333333333,
+   "act_noisy": 0.31666666666666665
+  }
+ }
+}
