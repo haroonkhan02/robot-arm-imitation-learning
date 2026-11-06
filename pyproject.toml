@@ -31,6 +31,7 @@ ra-policy-eval = "robot_arm_il.policy_eval:main"
 ra-demo = "robot_arm_il.demo:main"
 ra-analyse = "robot_arm_il.analysis:main"
 ra-stall = "robot_arm_il.stall:main"
+ra-latent = "robot_arm_il.latent:main"
 ra-plots = "robot_arm_il.plots:main"
 
 [tool.setuptools.packages.find]

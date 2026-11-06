@@ -67,6 +67,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--history", type=int, default=1, help="MLP only: observations per input")
     p.add_argument("--hidden", type=int, default=256, help="MLP only: layer width")
     p.add_argument("--layers", type=int, default=3, help="MLP only: hidden layers")
+    p.add_argument("--keep", choices=["best", "last"], default="best", help="checkpoint to keep")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--out", required=True, help="checkpoint path, e.g. models/act.pt")
     args = p.parse_args(argv)
@@ -121,8 +122,9 @@ def main(argv: list[str] | None = None) -> None:
             run += float(out["l1"])
         val_l1 = evaluate(model, va)
         history.append({"epoch": epoch + 1, "train_l1": run / steps_per_epoch, "val_l1": val_l1})
-        if val_l1 < best:
-            best = val_l1
+        improved = val_l1 < best
+        best = min(best, val_l1)
+        if improved if args.keep == "best" else epoch == args.epochs - 1:
             save_checkpoint(args.out, model, args.policy, kwargs, stats, {"epoch": epoch + 1})
         if (epoch + 1) % 5 == 0 or epoch == 0:
             print(

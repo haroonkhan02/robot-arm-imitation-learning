@@ -80,3 +80,13 @@ def test_mlp_with_history_and_chunk_masks_padded_steps():
     pred = model(obs)
     expected = pred[:, :2].abs().mean()
     assert torch.isclose(model.loss(obs, act, mask)["loss"], expected)
+
+
+def test_latent_gap_reports_both_errors():
+    from robot_arm_il.latent import latent_gap
+    from robot_arm_il.policies import ACTPolicy
+
+    model = ACTPolicy(chunk=4)
+    obs, actions = torch.randn(6, 13), torch.randn(6, 8, 6)
+    result = latent_gap(model, obs, actions, torch.ones(6, 8, dtype=torch.bool))
+    assert result["l1_zero"] > 0 and result["l1_posterior"] > 0 and result["kl"] >= 0

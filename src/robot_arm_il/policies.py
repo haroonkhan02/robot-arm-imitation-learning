@@ -95,14 +95,18 @@ class ACTPolicy(nn.Module):
     def forward(self, obs: torch.Tensor) -> torch.Tensor:  # (B, S) -> (B, K, A)
         return self._decode(obs, torch.zeros(obs.shape[0], self.latent, device=obs.device))
 
-    def loss(self, obs: torch.Tensor, actions: torch.Tensor, mask: torch.Tensor) -> dict:
+    def encode(self, obs: torch.Tensor, actions: torch.Tensor, mask: torch.Tensor):
+        """Posterior mean and log-variance of z given the observation and the target chunk."""
         b = obs.shape[0]
         tokens = torch.cat(
             [self.cls.expand(b, -1, -1), self.enc_obs(obs).unsqueeze(1), self.enc_act(actions)], 1
         )
         pad = torch.cat([torch.zeros(b, 2, dtype=torch.bool, device=obs.device), ~mask], 1)
         h = self.style_encoder(tokens + self.enc_pos, src_key_padding_mask=pad)[:, 0]
-        mu, logvar = self.to_latent(h).chunk(2, dim=-1)
+        return self.to_latent(h).chunk(2, dim=-1)
+
+    def loss(self, obs: torch.Tensor, actions: torch.Tensor, mask: torch.Tensor) -> dict:
+        mu, logvar = self.encode(obs, actions, mask)
         z = mu + torch.randn_like(mu) * (0.5 * logvar).exp()
         pred = self._decode(obs, z)
         l1 = ((pred - actions).abs().mean(-1) * mask).sum() / mask.sum()

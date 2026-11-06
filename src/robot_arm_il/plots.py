@@ -83,19 +83,22 @@ def outcomes(reports: dict, out: Path) -> None:
 
 def demo_sweep(reports: dict, out: Path) -> None:
     fig, ax = plt.subplots(figsize=(5.2, 3.4))
-    sizes = [10, 20, 50]
-    means = []
-    for n in sizes:
+    runs = {10: "act_n10", 20: "act_n20", 50: "act_n50", 120: "act_n120", 480: "act_clean"}
+    sizes, means = [], []
+    for n, base in runs.items():
         v = [
             reports[k]["success_rate"] * 100
-            for k in (f"act_n{n}", f"act_n{n}_s1", f"act_n{n}_s2")
+            for k in (base, f"{base}_s1", f"{base}_s2")
             if k in reports
         ]
-        ax.scatter([n] * len(v), v, c="#2e7d5b", alpha=0.6, s=24)
-        means.append(np.mean(v))
+        if v:
+            ax.scatter([n] * len(v), v, c="#2e7d5b", alpha=0.6, s=24)
+            sizes.append(n)
+            means.append(np.mean(v))
     ax.plot(sizes, means, c="#2e7d5b", label="ACT, mean of seeds")
     ax.set(xscale="log", xlabel="training demonstrations", ylabel="success, %", ylim=(0, 104))
     ax.set_xticks(sizes, sizes)
+    ax.minorticks_off()
     ax.legend(frameon=False, loc="lower right")
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
@@ -136,8 +139,9 @@ def workspace(reports: dict, demos, out: Path) -> None:
         ax.scatter(*train_layouts(demos, n, 0)[:, :2].T, s=70, marker="x", c="k", label="training")
         ax.set(title=f"{n} demonstrations", xlabel="cube x, m", ylabel="cube y, m")
         ax.spines[["top", "right"]].set_visible(False)
-    axes[0][0].legend(frameon=False, fontsize=8)
-    fig.tight_layout()
+    handles, names = axes[0][0].get_legend_handles_labels()
+    fig.legend(handles, names, loc="upper center", ncol=3, frameon=False, fontsize=8)
+    fig.tight_layout(rect=(0, 0, 1, 0.94))
     fig.savefig(out / "workspace.png", dpi=150)
     plt.close(fig)
 
