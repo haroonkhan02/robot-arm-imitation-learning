@@ -4,12 +4,14 @@ import numpy as np
 
 from robot_arm_il.collect import main as collect_main
 from robot_arm_il.dataset import (
+    DemoSet,
     build_demoset,
     chunk_targets,
     load_demoset,
     normalisation_stats,
     save_demoset,
     split_episodes,
+    stack_history,
 )
 
 
@@ -67,3 +69,10 @@ def test_chunk_targets_follow_the_episode_and_mask_the_tail():
     assert list(mask[4]) == [True, False, False]
     assert np.allclose(actions[4, 1], demos.actions[4])
     assert mask[:3].all() and list(mask[5 + 5]) == [True, True, False]
+
+
+def test_stack_history_is_oldest_first_and_stops_at_the_episode_start():
+    obs = np.arange(5, dtype=np.float32)[:, None]  # episodes: frames 0-1 and 2-4
+    demos = DemoSet(obs, np.zeros((5, 6), np.float32), np.array([2, 5]), np.array([0, 1]))
+    stacked = stack_history(demos, obs, 3)
+    assert stacked.tolist() == [[0, 0, 0], [0, 0, 1], [2, 2, 2], [2, 2, 3], [2, 3, 4]]

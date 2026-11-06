@@ -69,3 +69,14 @@ def test_policy_can_overfit_a_tiny_batch():
         opt.step()
     assert float(model.loss(obs, act, mask)["l1"]) < 0.2 * first
 
+
+
+def test_mlp_with_history_and_chunk_masks_padded_steps():
+    model = MLPPolicy(history=3, chunk=4)
+    obs = torch.randn(2, STATE_DIM * 3)
+    act = torch.zeros(2, 4, ACTION_DIM)
+    assert model(obs).shape == (2, 4, ACTION_DIM)
+    mask = torch.tensor([[True, True, False, False]] * 2)
+    pred = model(obs)
+    expected = pred[:, :2].abs().mean()
+    assert torch.isclose(model.loss(obs, act, mask)["loss"], expected)

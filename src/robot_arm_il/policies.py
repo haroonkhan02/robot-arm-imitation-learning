@@ -9,24 +9,33 @@ from .config import ACTION_DIM, STATE_DIM
 
 
 class MLPPolicy(nn.Module):
-    """obs -> one action. The simplest behaviour-cloning baseline."""
+    """Behaviour-cloning MLP: the last `history` observations -> the next `chunk` actions.
 
-    chunk = 1
+    `history=1, chunk=1` is plain behaviour cloning. The other settings exist as controls, to
+    separate what ACT gains from memory, from predicting several steps, and from its architecture.
+    """
 
-    def __init__(self, hidden: int = 256, layers: int = 3, dropout: float = 0.0):
+    def __init__(
+        self,
+        hidden: int = 256,
+        layers: int = 3,
+        dropout: float = 0.0,
+        history: int = 1,
+        chunk: int = 1,
+    ):
         super().__init__()
-        dims = [STATE_DIM] + [hidden] * layers
+        self.history, self.chunk = history, chunk
+        dims = [STATE_DIM * history] + [hidden] * layers
         blocks: list[nn.Module] = []
         for a, b in zip(dims[:-1], dims[1:], strict=True):
             blocks += [nn.Linear(a, b), nn.GELU(), nn.Dropout(dropout)]
-        self.net = nn.Sequential(*blocks, nn.Linear(hidden, ACTION_DIM))
+        self.net = nn.Sequential(*blocks, nn.Linear(hidden, ACTION_DIM * chunk))
 
-    def forward(self, obs: torch.Tensor) -> torch.Tensor:  # (B, S) -> (B, 1, A)
-        return self.net(obs).unsqueeze(1)
+    def forward(self, obs: torch.Tensor) -> torch.Tensor:  # (B, S * H) -> (B, K, A)
+        return self.net(obs).view(obs.shape[0], self.chunk, ACTION_DIM)
 
     def loss(self, obs: torch.Tensor, actions: torch.Tensor, mask: torch.Tensor) -> dict:
-        pred = self(obs)
-        l1 = (pred - actions[:, :1]).abs().mean()
+        l1 = ((self(obs) - actions).abs().mean(-1) * mask).sum() / mask.sum()
         return {"loss": l1, "l1": l1.detach()}
 
 

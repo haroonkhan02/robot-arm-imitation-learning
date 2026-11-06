@@ -10,13 +10,20 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from .dataset import chunk_targets, load_demoset, normalisation_stats, split_episodes
+from .dataset import (
+    chunk_targets,
+    load_demoset,
+    normalisation_stats,
+    split_episodes,
+    stack_history,
+)
 from .policies import build_policy, pick_device
 
 
-def make_tensors(demos, chunk: int, stats: dict, device: torch.device):
+def make_tensors(demos, chunk: int, stats: dict, device: torch.device, history: int = 1):
     actions, mask = chunk_targets(demos, chunk)
-    obs = torch.as_tensor((demos.observations - stats["obs"]["mean"]) / stats["obs"]["std"])
+    norm = (demos.observations - stats["obs"]["mean"]) / stats["obs"]["std"]
+    obs = torch.as_tensor(stack_history(demos, norm, history))
     act = torch.as_tensor((actions - stats["act"]["mean"]) / stats["act"]["std"])
     return obs.to(device), act.float().to(device), torch.as_tensor(mask).to(device)
 
@@ -56,7 +63,10 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--epochs", type=int, default=60)
     p.add_argument("--batch-size", type=int, default=256)
     p.add_argument("--lr", type=float, default=3e-4)
-    p.add_argument("--chunk", type=int, default=20)
+    p.add_argument("--chunk", type=int, help="actions per prediction (default: ACT 20, MLP 1)")
+    p.add_argument("--history", type=int, default=1, help="MLP only: observations per input")
+    p.add_argument("--hidden", type=int, default=256, help="MLP only: layer width")
+    p.add_argument("--layers", type=int, default=3, help="MLP only: hidden layers")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--out", required=True, help="checkpoint path, e.g. models/act.pt")
     args = p.parse_args(argv)
@@ -74,11 +84,16 @@ def main(argv: list[str] | None = None) -> None:
         "obs": normalisation_stats(train.observations),
         "act": normalisation_stats(train.actions),
     }
-    chunk = 1 if args.policy == "bc" else args.chunk
-    kwargs = {} if args.policy == "bc" else {"chunk": chunk}
+    if args.policy == "act" and args.history != 1:
+        p.error("--history is only available for the MLP")
+    chunk = args.chunk or (1 if args.policy == "bc" else 20)
+    kwargs: dict = {"chunk": chunk}
+    if args.policy == "bc":
+        kwargs |= {"history": args.history, "hidden": args.hidden, "layers": args.layers}
     model = build_policy(args.policy, **kwargs).to(device)
     n_params = sum(p.numel() for p in model.parameters())
-    tr, va = make_tensors(train, chunk, stats, device), make_tensors(val, chunk, stats, device)
+    tr = make_tensors(train, chunk, stats, device, args.history)
+    va = make_tensors(val, chunk, stats, device, args.history)
     opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
     steps_per_epoch = max(1, len(tr[0]) // args.batch_size)
     sched = torch.optim.lr_scheduler.OneCycleLR(

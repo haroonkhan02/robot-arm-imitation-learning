@@ -94,3 +94,16 @@ def chunk_targets(demos: DemoSet, chunk: int) -> tuple[np.ndarray, np.ndarray]:
     mask = idx < ends[:, None]
     idx = np.minimum(idx, ends[:, None] - 1)
     return demos.actions[idx], mask
+
+
+def stack_history(demos: DemoSet, obs: np.ndarray, history: int) -> np.ndarray:
+    """Concatenate each frame with the `history - 1` frames before it, oldest first.
+
+    Frames before the episode start repeat its first frame, which is also what the policy sees
+    at the start of a rollout. `obs` is `demos.observations`, usually normalised.
+    """
+    lengths = np.diff(np.concatenate([[0], demos.episode_ends]))
+    starts = np.repeat(demos.episode_ends - lengths, lengths)
+    idx = np.arange(len(obs))[:, None] + np.arange(1 - history, 1)[None, :]
+    idx = np.maximum(idx, starts[:, None])
+    return obs[idx].reshape(len(obs), -1)
