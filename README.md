@@ -107,12 +107,12 @@ reports/                      per-episode results (JSON), analysis tables, figur
 
 ## Design decisions
 
-- **Own environment instead of a packaged benchmark.** Full control over the task, physics and expert, and rollouts cheap enough to score each of the 80-odd runs on 300 episodes.
-- **Rollout success as the main metric.** The plain MLP has the lowest validation error of all the policies and solves nothing.
-- **Controls before conclusions.** My first explanation credited chunking alone. The memory and ensembling controls changed that.
-- **Three training seeds on the main comparisons.** One newest-chunk run scored 84 %; its repeats scored 8 % and 1 %.
-- **Evaluation layouts stay out of training.** Demonstrations use seeds 1000–1599 and rollouts start at 50000. Splits are by episode.
-- **Four equivalent grasp yaws.** Cube and gripper are symmetric under 90-degree turns, so the expert picks the one needing the least wrist roll.
+- I built the environment instead of using a packaged benchmark. That gave full control over the task, physics and expert, and rollouts cheap enough to score all 74 evaluations on 300 episodes.
+- Rollout success is the main metric, because the plain MLP has the lowest validation error of all the policies and solves nothing.
+- The main comparisons use three training seeds, because run-to-run spread is often larger than the gaps between methods.
+- Each control changes one thing, so memory, size, chunking, ensembling and checkpoint choice can be told apart.
+- Evaluation layouts stay out of training: demonstrations use seeds 1000–1599, rollouts start at 50000, and splits are by episode.
+- Cube and gripper are symmetric under 90-degree turns, so the expert tries all four grasp yaws and keeps the one needing the least wrist roll.
 
 ## Limitations and next steps
 
