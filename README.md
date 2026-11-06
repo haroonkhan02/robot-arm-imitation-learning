@@ -1,7 +1,7 @@
 <h1 align="center">Robot arm imitation learning</h1>
 
 <p align="center">
-A simulated MuJoCo arm learns pick-and-place from demonstrations: scripted expert, behaviour cloning and action-chunking transformers, compared on seeded rollouts.
+A simulated MuJoCo arm learns pick-and-place from demonstrations. Controlled experiments compare behaviour cloning with action-chunking transformers (ACT) to find out which part of ACT does the work.
 </p>
 
 <p align="center">
@@ -11,77 +11,74 @@ A simulated MuJoCo arm learns pick-and-place from demonstrations: scripted exper
 <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT">
 </p>
 
-<p align="center"><img src="assets/expert_demo.gif" alt="Scripted expert picking a cube and placing it on the green marker" width="360"></p>
-
-> **Work in progress.** Simulator, expert, demonstrations, behaviour cloning and ACT are
-> done and evaluated. Still to come: failure analysis, rollout videos and the final write-up.
+<p align="center"><img src="assets/rollouts.gif" alt="Plain MLP stalls at the cube while ACT completes the same episode" width="640"></p>
 
 ## What it does
 
 - A 5-joint arm with a two-finger gripper picks up a cube at a random position and orientation and puts it on a marker at a random goal position (MuJoCo, 20 Hz control).
-- A scripted expert (Cartesian waypoints, damped-least-squares IK) solves the task and provides the demonstrations. Policies only see observation-action pairs, never the planner.
-- Demonstrations are split by episode, so no trajectory appears in both training and evaluation.
-- Evaluation is the success rate over seeded episodes the policies never saw (seeds 50000 and up; demonstrations use 1000 to 1599).
+- A scripted expert (Cartesian waypoints, damped-least-squares IK) provides 600 demonstrations. Policies only see observation-action pairs, never the planner.
+- An MLP and my own state-based ACT are trained on the same data, then scored on 300 unseen layouts per run.
+- Control experiments vary one thing at a time: memory, model size, chunk length, ensembling, checkpoint choice, data size and noise.
+- Each failed episode is labelled by the first task stage it missed.
 
 ```mermaid
 flowchart LR
     A[Random cube + goal] --> B[Scripted expert]
     B -->|observations, actions| C[(Demonstrations)]
-    C --> D[Behaviour cloning]
+    C --> D[MLP controls]
     C --> E[ACT]
     D --> F[Seeded rollouts]
     E --> F
-    F --> G[Success rate, videos]
+    F --> G[Stage analysis, figures, GIF]
 ```
 
 ## Results
 
-Success rate on unseen seeds (300 episodes unless noted), trained on 480 clean demonstrations (about 59k frames).
+Success on unseen seeds (300 episodes per run) after training on 480 clean demonstrations, for three training seeds. The scripted expert scores 100 %.
 
-| Controller | Success | Cube lifted |
-|---|---|---|
-| Scripted expert | 100 % | 100 % |
-| MLP behaviour cloning | 0 % | 3 % |
-| ACT (chunk 20, temporal ensembling) | 100 % | 100 % |
-| ACT, newest chunk only (no ensembling) | 84 % | 98 % |
-| ACT trained on noise-perturbed demonstrations | 100 % | 100 % |
-| MLP trained on noise-perturbed demonstrations | 0 % | 1 % |
+| Policy | Parameters | Success per seed | Mean |
+|---|---|---|---|
+| MLP, next action only | 137k | 0 %, 0 %, 0.3 % | 0.1 % |
+| MLP, chunk 5 + ensembling | 143k | 96.7 %, 99.0 %, 72.0 % | 89.2 % |
+| MLP, chunk 20 + ensembling | 166k | 91.3 %, 90.0 %, 80.7 % | 87.3 % |
+| ACT, chunk 5 + ensembling | 1.3M | 55.0 %, 56.7 %, 2.7 % | 38.1 % |
+| ACT, chunk 20 + ensembling | 1.3M | 100 %, 97.0 %, 100 % | 99.0 % |
+| ACT, chunk 20, newest chunk only | 1.3M | 84.0 %, 8.3 %, 1.3 % | 31.2 % |
+| ACT, chunk 20, final epoch | 1.3M | 8.3 %, 8.3 %, 10.0 % | 8.9 % |
 
-Success rate against the number of training demonstrations (100 episodes each, about 6,000 optimiser steps):
+ACT success against the number of training demonstrations (ensembled, mean of three seeds; 120 is one seed):
 
-| Demonstrations | 10 | 20 | 50 | 120 |
-|---|---|---|---|---|
-| ACT | 20 % | 75 % | 99 % | 98 % |
-| MLP | 0 % | 0 % | 0 % | 0 % |
+| Demonstrations | 10 | 20 | 50 | 120 | 480 |
+|---|---|---|---|---|---|
+| Success | 34.4 % | 76.7 % | 98.8 % | 97.3 % | 99.0 % |
 
-The MLP reaches the cube and closes the gripper, then stays there. The expert waits a fixed number of steps
-after closing before it lifts, and during that wait the 13-dimensional state does not change, so a
-policy that sees only the current state cannot tell "still waiting" from "time to lift". An action chunk
-carries the timing with it, which is why ACT works and more data or noisier demonstrations do not help the MLP.
-The expert with 0.03 rad execution noise succeeds 84.7 % of the time, so noise-perturbed demonstrations
-(507 of 600 episodes kept) are a harder, more varied source; ACT trained on them still reaches 100 %.
-Everything is a single seed and the policies see the true cube pose, so these numbers say little about
-vision-based policies or real robots.
+<p align="center"><img src="reports/figures/outcomes.png" alt="Where each policy's episodes end, by first missed stage" width="620"></p>
+
+The plain MLP fails because it has no memory: after closing the gripper the expert waits 8 steps, the state barely changes, and most episodes stop at the cube. A 3.2M-parameter MLP does no better (0 %). Stacking past observations fixes the lift only once the history covers the wait, and even 20 frames reach only 65 % (one seed).
+
+Most of the gain comes from predicting chunks and averaging them, not from the transformer: a 166k-parameter MLP gets close to ACT. Ensembling matters most, because the same models using only the newest chunk drop to 1–84 %. My reading is that older chunks act as memory during the wait, though I have not proved that directly.
+
+ACT is still the best policy here, with two caveats. Its CVAE latent collapsed (KL 0.000 on validation), which fits a deterministic expert, so this is effectively a plain transformer. It also overfits: validation error is lowest near epoch 13 of 50, and the final-epoch weights lift every cube but rarely reach the goal. The 99 % depends on that checkpoint choice.
+
+Under joint noise while executing (0.03 rad), ACT drops to 52 % with clean demonstrations and 67 % with noisy ones, against 85 % for the expert. Details and all other runs are in [reports/analysis.md](reports/analysis.md). The chunk-10, decay, history and noise runs use a single seed.
 
 ## Getting started
 
 ```bash
 uv venv --python 3.12 && source .venv/bin/activate
-uv pip install -e ".[dev]"
-pytest -q                                   # simulator tests, CPU only
+uv pip install -e ".[dev,train]"
+pytest -q                                               # CPU only, no dataset needed
 
 ra-collect --episodes 600 --out data/demos_clean.npz    # about 15 s
-ra-expert-eval --episodes 300 --video demo.mp4          # success rate + video
-
-uv pip install -e ".[train]"                            # adds PyTorch
 ra-train --policy act --epochs 50 --out models/act.pt   # about 7 min on an M-series GPU (MPS)
-ra-policy-eval --ckpt models/act.pt --episodes 300      # seeded rollouts, JSON summary
+ra-policy-eval --ckpt models/act.pt --device cpu --out reports/eval_act.json
+
 scripts/run_sweep.sh                                    # demonstration-count and noise sweeps
+scripts/run_controls.sh mlp                             # also: act, seeds, chunk5, last, decay, eval
+ra-analyse && ra-plots                                  # tables and figures in reports/
 ```
 
-Observations are a 13-vector (joints, gripper opening, cube pose, goal), actions are five
-absolute joint targets plus a gripper command. `PickPlaceEnv.render("front" | "top")` returns
-camera images for vision-based policies.
+Observations are a 13-vector (joints, gripper opening, cube pose, goal). Actions are five absolute joint targets plus a gripper command.
 
 ## Repository structure
 
@@ -91,31 +88,38 @@ src/robot_arm_il/
   config.py                   dimensions and task randomisation ranges
   env.py                      PickPlaceEnv (reset / step / render)
   kinematics.py               damped-least-squares IK for the gripper site
-  expert.py                   scripted pick-and-place expert, run_episode()
-  dataset.py                  episode storage, episode-level splits, normalisation
+  expert.py                   scripted pick-and-place expert
+  dataset.py                  episode storage, splits, normalisation, chunks, history
   collect.py                  ra-collect: generate demonstrations
   expert_eval.py              ra-expert-eval: expert success rate and video
-  policies.py                 MLP behaviour cloning and ACT (CVAE + transformer, action chunks)
-  train.py                    ra-train: train on demonstrations, episode-level validation split
-  policy_eval.py              ra-policy-eval: seeded rollouts with temporal ensembling
-scripts/run_sweep.sh          demonstration-count and noisy-demonstration runs
-tests/                        57 tests (env, IK, expert, dataset, policies, training)
-reports/                      expert baseline and per-episode policy results (JSON)
+  policies.py                 MLP (history, chunks) and ACT (CVAE + transformer)
+  train.py                    ra-train: training loop and checkpoints
+  policy_eval.py              ra-policy-eval: rollouts, temporal ensembling, task stages
+  analysis.py                 ra-analyse: intervals, failure stages, seeds, coverage
+  stall.py                    ra-stall: copy baseline and frozen-arm probe
+  latent.py                   ra-latent: does ACT use its latent?
+  plots.py                    ra-plots: figures
+  demo.py                     ra-demo: side-by-side rollout GIF
+scripts/                      resumable sweeps and control experiments
+tests/                        74 tests, CPU only
+reports/                      per-episode results (JSON), analysis tables, figures
 ```
 
 ## Design decisions
 
-- **Own environment instead of a packaged benchmark.** I wanted full control over the task, the physics and the expert, and a simulator fast enough (about 5,000 control steps per second with the expert and its IK on a laptop CPU) that hundreds of rollouts per evaluation are cheap.
-- **Joint-position actions.** The policy outputs absolute joint targets, as in ACT and ALOHA, rather than end-effector deltas, so it never needs the IK solver.
-- **Own small ACT instead of a library.** The policy sees a state vector, so a 1.3M-parameter CVAE transformer trains in minutes and every part is visible. At inference the latent is zero and chunks overlap with exponential temporal ensembling.
-- **Four equivalent grasp yaws.** The cube and the gripper are both symmetric under 90-degree turns. IK from the home pose can pick the solution that winds the wrist roll into its limit, so the expert solves all four and keeps the smallest roll.
-- **Finger armature.** With light fingers the grip force chattered and the cube slid out during transport (35 of 40 seeds). Giving the finger joints some armature fixed it without changing the control gains much.
+- **Own environment instead of a packaged benchmark.** Full control over the task, physics and expert, and rollouts cheap enough to score each of the 80-odd runs on 300 episodes.
+- **Rollout success as the main metric.** The plain MLP has the lowest validation error of all the policies and solves nothing.
+- **Controls before conclusions.** My first explanation credited chunking alone. The memory and ensembling controls changed that.
+- **Three training seeds on the main comparisons.** One newest-chunk run scored 84 %; its repeats scored 8 % and 1 %.
+- **Evaluation layouts stay out of training.** Demonstrations use seeds 1000–1599 and rollouts start at 50000. Splits are by episode.
+- **Four equivalent grasp yaws.** Cube and gripper are symmetric under 90-degree turns, so the expert picks the one needing the least wrist roll.
 
 ## Limitations and next steps
 
-- The task is state-based pick-and-place with one cube in a small workspace; there is no sim-to-real transfer.
-- The expert is privileged (it reads the true cube pose), so a vision policy has to infer the pose from pixels.
-- Next: failure analysis of the ACT misses at small data sizes, rollout videos, a history-aware MLP to confirm the explanation above.
+- State-based policies see the true cube pose, so these results say little about vision or real robots. There is no sim-to-real transfer.
+- The expert is deterministic and has one timing pattern. Human demonstrations are varied, and there the CVAE may matter.
+- The memory explanation for ensembling is an inference. A test that blanks older chunks only during the wait would check it directly.
+- Next: image observations, early stopping tested across more seeds, and a stochastic expert.
 
 ## License
 
