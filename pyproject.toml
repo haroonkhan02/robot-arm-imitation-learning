@@ -16,6 +16,7 @@ dependencies = [
     "matplotlib>=3.8",
     "imageio>=2.34",
     "imageio-ffmpeg>=0.5",
+    "pillow>=10",
 ]
 
 [project.optional-dependencies]
@@ -27,6 +28,10 @@ ra-collect = "robot_arm_il.collect:main"
 ra-expert-eval = "robot_arm_il.expert_eval:main"
 ra-train = "robot_arm_il.train:main"
 ra-policy-eval = "robot_arm_il.policy_eval:main"
+ra-demo = "robot_arm_il.demo:main"
+ra-analyse = "robot_arm_il.analysis:main"
+ra-stall = "robot_arm_il.stall:main"
+ra-plots = "robot_arm_il.plots:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
